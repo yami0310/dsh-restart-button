@@ -1,0 +1,7 @@
+# dsh-restart-button —— 侧栏底部一个「重新启动」按钮。
+#
+# 宿主半边负责 POST /api/dsh-restart-button/restart；
+# 网页半边往 sidebar.footer.action 里注册一个按钮。
+- insert:
+    - id: restart-button
+      name: dsh-restart-button
