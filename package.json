@@ -1,0 +1,56 @@
+{
+  "name": "dsh-restart-button",
+  "version": "1.0.0",
+  "description": "在左侧栏底部加一个「重新启动」按钮：一键重启 DSH，重启完自动收掉后台控制台。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "restart",
+    "sidebar",
+    "electron"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yami0310/dsh-restart-button.git"
+  },
+  "homepage": "https://github.com/yami0310/dsh-restart-button#readme",
+  "bugs": {
+    "url": "https://github.com/yami0310/dsh-restart-button/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "win32"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots"
+      ],
+      "external": [
+        "react"
+      ]
+    }
+  }
+}
