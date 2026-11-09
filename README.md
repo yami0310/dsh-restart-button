@@ -2,11 +2,15 @@
 
 给 [DeepSeek Harness](https://github.com/deepseek-ai) 的侧栏底部加一个「重新启动」按钮：一键重启，重启完不留控制台窗口，桌面窗口正常出现。
 
+![侧栏里的重新启动按钮](docs/screenshot-main.jpg)
+
 > **仅支持 Windows。** 整个实现建立在 `schtasks` / `wscript` / `taskkill` / job object 这些 Windows 机制上。
 
 ## 用法
 
 左侧栏底部会出现一个圆环箭头按钮：
+
+![按钮放大](docs/screenshot-button.jpg)
 
 - **点一下** → 变成「确认重启？」
 - **再点一下** → 真的重启（确认状态 3 秒后自动过期）
